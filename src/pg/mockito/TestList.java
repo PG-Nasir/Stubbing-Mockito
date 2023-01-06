@@ -37,4 +37,17 @@ public class TestList {
         System.out.println(mocklist);
 
     }
+
+    //we are going to mock a List.get() method.
+    // To use the get() method, we need to pass a value (number) in it
+    @Test
+    public void testList_get() {
+
+        List mocklist = mock(List.class);
+
+        when(mocklist.get(0)).thenReturn("Mockito");
+
+        assertEquals("Mockito", mocklist.get(0));
+        System.out.println(mocklist.get(0));
+    }
 }
